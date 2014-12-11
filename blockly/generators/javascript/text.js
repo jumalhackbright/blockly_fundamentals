@@ -233,16 +233,17 @@ Blockly.JavaScript['text_print'] = function(block) {
 
   //return 'window.alert(' + argument0 + ');\n';
 
- //var prompt = Blockly.JavaScript.valueToCode("SOME CODE", 'TEXT',
- //     Blockly.JavaScript.ORDER_NONE) || '\'\'';
+// var prompt = Blockly.JavaScript.valueToCode("SOME CODE", 'TEXT',
+//      Blockly.JavaScript.ORDER_NONE) || '\'\'';
 
-  
 
-  var newline = "\n";
+  document.getElementById('console_output').textContent += "\n> ";
+ // document.getElementById('console_output').textContent += argument0;
 
-  document.getElementById('console_output').textContent += prompt;
+  return "document.getElementById('console_output').textContent +=" + argument0 + ';\n';
 
-  return "document.getElementById('console_output').textContent += " + newline + argument0 + ';\n';
+  // return "document.getElementById('console_output').textContent += " + argument0 +';\n';
+ // return "document.getElementById('console_output').innerHTML += " + argument0 + " &lt;br&gt; " + ';';
 
 };
 

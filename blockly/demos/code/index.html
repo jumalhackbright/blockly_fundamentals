@@ -7,7 +7,21 @@
   <link rel="stylesheet" href="style.css">
   <script src="../../blockly_uncompressed.js"></script>
   <script src="../../blocks_compressed.js"></script>
-  <script src="../../javascript_compressed.js"></script>
+  <!-- // <script src="../../javascript_compressed.js"></script> -->
+
+
+
+<script src="../../generators/javascript.js"></script>
+<script src="../../generators/javascript/logic.js"></script>
+<script src="../../generators/javascript/loops.js"></script>
+<script src="../../generators/javascript/math.js"></script>
+<script src="../../generators/javascript/text.js"></script>
+<script src="../../generators/javascript/lists.js"></script>
+<script src="../../generators/javascript/colour.js"></script>
+<script src="../../generators/javascript/variables.js"></script>
+<script src="../../generators/javascript/procedures.js"></script>
+
+
   <script src="../../python_compressed.js"></script>
   <script src="../../dart_compressed.js"></script>
   <script src="code.js"></script>
@@ -31,13 +45,14 @@
           <tr id="tabRow" height="1em">
             <td id="tab_blocks" class="tabon">...</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_javascript" class="taboff">JavaScript</td>
+            <td id="tab_javascript" hidden class="taboff">JavaScript</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_python" class="taboff">Python</td>
+            <td id="tab_python" hidden class="taboff">Python</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_dart" class="taboff">Dart</td>
+            <td id="tab_dart" hidden class="taboff">Dart</td>
             <td class="tabmin">&nbsp;</td>
-            <td id="tab_xml" class="taboff">XML</td>
+            <td id="tab_xml" hidden class="taboff">XML</td>
+           
             <td class="tabmax">
               <button id="trashButton" class="notext" title="...">
                 <img src='../../media/1x1.gif' class="trash icon21">
@@ -58,12 +73,16 @@
       </td>
     </tr>
     <tr height="200px">
-      <td><div> 
-         <div><b>CONSOLE OUTPUT</b></div> 
-         <div id="console_output"> </div>
+      <td style="width:100%">
+      <div> 
+         <div class="console_label"><b>CONSOLE OUTPUT</b></div> 
+         <div id="console_output"></div>
       </div>
-      </td>
-      <td></td>
+     </td>
+      <td >
+      <div class="console_label" style="height:18px;">
+      </div> 
+     </td>
     </tr>
   </table>
   <div id="content_blocks" class="content"></div>

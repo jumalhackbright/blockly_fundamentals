@@ -159,3 +159,12 @@ button {
 .run {
   background-position: -42px 0px;
 }
+
+.console_label{
+  padding:10px;
+  background-color: #888;
+  color: white;
+}
+#console_output {
+  white-space: pre;
+}
